@@ -442,6 +442,11 @@ body {
     max-width: 90%;
 }
 
+/* Remove the previous text indicator completely */
+.portfolio-container::before {
+    display: none;
+}
+
 .portfolio-slider {
     position: relative;
     width: 100%;
@@ -449,11 +454,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Remove the previous text indicator */
-.portfolio-container::before {
-    display: none;
 }
 
 .portfolio-item {
