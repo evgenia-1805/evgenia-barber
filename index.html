@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитная карточка</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div class="card-carousel">
+        <div class="cards-container">
+            <div class="business-card active">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="./assets/images/profile.jpg?v=1" alt="Фото профиля">
+                        <p class="profile-caption">Мастер-барбер</p>
+                    </div>
+                    <div class="contact-info">
+                        <p><img src="./assets/images/icons/phone.png" alt="Телефон" class="icon"> +7 (982) 336-46-21</p>
+                        <p><img src="./assets/images/icons/location.png" alt="Адрес" class="icon"> ул. Хохрякова, 63, Екатеринбург</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <h1>Кто я такая?</h1>
+                    <p class="intro-text">Профессиональный барбер с 5-летним опытом работы. Специализируюсь на классических стрижках и современных техниках. Создаю индивидуальный стиль для каждого клиента.</p>
+                </div>
+            </div>
+
+            <!-- Style Help Card -->
+            <div class="business-card">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="./assets/images/profile.jpg?v=1" alt="Фото профиля">
+                        <p class="profile-caption">Мастер-барбер</p>
+                    </div>
+                    <div class="contact-info">
+                        <p><img src="./assets/images/icons/phone.png" alt="Телефон" class="icon"> +7 (982) 336-46-21</p>
+                        <p><img src="./assets/images/icons/location.png" alt="Адрес" class="icon"> ул. Хохрякова, 63, Екатеринбург</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <h1>Найди свой стиль</h1>
+                    <p class="intro-text">Помогу подобрать идеальную стрижку, которая подчеркнет вашу индивидуальность и будет соответствовать вашему образу жизни. Учитываю форму лица, тип волос и ваши предпочтения для создания неповторимого образа.</p>
+                </div>
+            </div>
+
+            <div class="business-card">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="./assets/images/profile.jpg?v=1" alt="Фото профиля">
+                        <p class="profile-caption">Мастер-барбер</p>
+                    </div>
+                    <div class="contact-info">
+                        <p><img src="./assets/images/icons/phone.png" alt="Телефон" class="icon"> +7 (982) 336-46-21</p>
+                        <p><img src="./assets/images/icons/location.png" alt="Адрес" class="icon"> ул. Хохрякова, 63, Екатеринбург</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <h1>E. E. Barber</h1>
+                    <h2>Мастер-барбер</h2>
+                    <p class="company">Барбершоп E. E. Barber</p>
+                    <div class="skills">
+                        <h3>Услуги и цены</h3>
+                        <div class="scroll-indicator">Прокрутите для просмотра</div>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <span class="service-name">Мужская стрижка</span>
+                                <span class="service-price">1700 ₽</span>
+                                <span class="service-duration">1 час</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Комплекс (стрижка + борода)</span>
+                                <span class="service-price">2500 ₽</span>
+                                <span class="service-duration">1.5 часа</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Стрижка бороды</span>
+                                <span class="service-price">800 ₽</span>
+                                <span class="service-duration">30 минут</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Детская стрижка (до 12 лет)</span>
+                                <span class="service-price">1200 ₽</span>
+                                <span class="service-duration">45 минут</span>
+                            </div>
+                            <div class="service-item">
+                                <span class="service-name">Камуфляж седины</span>
+                                <span class="service-price">от 1500 ₽</span>
+                                <span class="service-duration">1 час</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Card -->
+            <div class="business-card">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="./assets/images/profile.jpg?v=1" alt="Фото профиля">
+                        <p class="profile-caption">Мастер-барбер</p>
+                    </div>
+                    <div class="contact-info">
+                        <p><img src="./assets/images/icons/phone.png" alt="Телефон" class="icon"> +7 (982) 336-46-21</p>
+                        <p><img src="./assets/images/icons/location.png" alt="Адрес" class="icon"> ул. Хохрякова, 63, Екатеринбург</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <h1>Портфолио</h1>
+                    <div class="portfolio-container">
+                        <div class="portfolio-slider">
+                            <div class="portfolio-item active">
+                                <img src="./assets/images/portfolio/IMG_1009.PNG" alt="Работа 1" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1007.PNG" alt="Работа 2" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1006.PNG" alt="Работа 3" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1005.PNG" alt="Работа 4" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1457.PNG" alt="Работа 5" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1458.PNG" alt="Работа 6" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1459.PNG" alt="Работа 7" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1460.PNG" alt="Работа 8" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1461.PNG" alt="Работа 9" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1463.PNG" alt="Работа 10" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1455.PNG" alt="Работа 11" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-item">
+                                <img src="./assets/images/portfolio/IMG_1456.PNG" alt="Работа 12" class="portfolio-img">
+                            </div>
+                        </div>
+                        <div class="portfolio-navigation">
+                            <button class="portfolio-nav-btn prev" onclick="navigatePortfolio('prev')">
+                                <img src="./assets/images/icons/chevron-left.png" alt="Предыдущее">
+                            </button>
+                            <button class="portfolio-nav-btn next" onclick="navigatePortfolio('next')">
+                                <img src="./assets/images/icons/chevron-right.png" alt="Следующее">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QR Code Card -->
+            <div class="business-card">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="./assets/images/profile.jpg?v=1" alt="Фото профиля">
+                        <p class="profile-caption">Мастер-барбер</p>
+                    </div>
+                    <div class="contact-info">
+                        <p><img src="./assets/images/icons/phone.png" alt="Телефон" class="icon"> +7 (982) 336-46-21</p>
+                        <p><img src="./assets/images/icons/location.png" alt="Адрес" class="icon"> ул. Хохрякова, 63, Екатеринбург</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <h2>Запись на визит</h2>
+                    <div class="qr-section">
+                        <p class="qr-text">Вы можете записаться на визит одним из способов:</p>
+                        <p class="qr-text">1. Позвонить по телефону +7 (982) 336-46-21</p>
+                        <p class="qr-text">2. Или нажать кнопку ниже для онлайн-записи:</p>
+                        <button class="appointment-btn" onclick="window.location.href='https://dikidi.net/1674660'">
+                            <img src="./assets/images/icons/phone.png" alt="Запись" class="icon">
+                            Записаться на визит
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Card -->
+            <div class="business-card">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="./assets/images/profile.jpg?v=1" alt="Фото профиля">
+                        <p class="profile-caption">Мастер-барбер</p>
+                    </div>
+                    <div class="contact-info">
+                        <p><img src="./assets/images/icons/phone.png" alt="Телефон" class="icon"> +7 (982) 336-46-21</p>
+                        <p><img src="./assets/images/icons/location.png" alt="Адрес" class="icon"> ул. Хохрякова, 63, Екатеринбург</p>
+                    </div>
+                </div>
+                <div class="info social-card">
+                    <h1>Социальные сети</h1>
+                    <div class="social-links">
+                        <a href="https://instagram.com/evgenia_efremova_18/" target="_blank" class="social-link">
+                            <img src="./assets/images/icons/instagram.png" alt="Instagram" class="social-icon">
+                            Instagram
+                        </a>
+                        <a href="https://vk.com/barberevgenia18" target="_blank" class="social-link">
+                            <img src="./assets/images/icons/vk.png" alt="VK" class="social-icon">
+                            VK
+                        </a>
+                        <a href="tg://join?invite=dTL1TxSmUQUxNmIy" target="_blank" class="social-link">
+                            <img src="./assets/images/icons/telegram.png" alt="Telegram" class="social-icon">
+                            Telegram
+                        </a>
+                    </div>
+                    <div class="map-section">
+                        <h2>Как нас найти</h2>
+                        <div id="map" class="map-container"></div>
+                        <p class="address">E. E. Barber, ул. Хохрякова, 63, Екатеринбург</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="nav-btn prev"><img src="./assets/images/icons/chevron-left.png" alt="Назад"></button>
+            <button class="nav-btn next"><img src="./assets/images/icons/chevron-right.png" alt="Вперёд"></button>
+        </div>
+    </div>
+
+    <!-- Image Preview Modal -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/map.js"></script>
+</body>
+</html> 
