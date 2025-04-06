@@ -576,6 +576,7 @@ body {
     transform: scale(1.2);
 }
 
+/* Mobile responsiveness for the entire card carousel */
 @media (max-width: 768px) {
     body {
         padding: 0;
@@ -617,6 +618,7 @@ body {
         min-height: auto;
         box-shadow: none;
         margin-bottom: 20px;
+        width: 100%;
     }
     
     .profile-section {
@@ -734,6 +736,11 @@ body {
     
     .exp-item p {
         font-size: 14px;
+    }
+    
+    /* Disable scroll buttons for cards on mobile */
+    .nav-btn {
+        display: none;
     }
 }
 
