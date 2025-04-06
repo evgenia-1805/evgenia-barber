@@ -958,4 +958,74 @@ body {
     100% {
         opacity: 0.7;
     }
+}
+
+/* Mobile responsiveness for the entire card carousel */
+@media (max-width: 768px) {
+    .card-carousel {
+        width: 95%;
+        height: auto;
+        min-height: 600px;
+    }
+    
+    .business-card {
+        padding: 30px;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .profile-section {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    
+    .info {
+        width: 100%;
+    }
+    
+    .portfolio-container {
+        height: 400px;
+        padding: 10px;
+    }
+    
+    .portfolio-img {
+        max-height: 400px;
+    }
+    
+    .portfolio-navigation {
+        bottom: 10px;
+    }
+    
+    .portfolio-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .portfolio-nav-btn img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .card-carousel {
+        width: 100%;
+        min-height: 500px;
+    }
+    
+    .business-card {
+        padding: 20px;
+    }
+    
+    .portfolio-container {
+        height: 300px;
+    }
+    
+    .portfolio-img {
+        max-height: 300px;
+    }
 } 
