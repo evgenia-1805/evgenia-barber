@@ -422,7 +422,7 @@ body {
     overflow: hidden;
     position: relative;
     padding: 20px;
-    height: 400px;
+    height: 600px;
 }
 
 .portfolio-slider {
@@ -507,10 +507,10 @@ body {
     border-radius: 15px;
     transition: transform 0.5s ease;
     background-color: var(--light);
-	max-height: 600px;
+    max-height: 600px;
 }
 
-/* Alternative style for cropping from bottom */
+/* Remove the crop-bottom class since we want to show full photos */
 .portfolio-img.crop-bottom {
     object-fit: contain;
     object-position: center;
@@ -584,36 +584,19 @@ body {
     transform: scale(1.2);
 }
 
+/* Mobile responsiveness for portfolio */
 @media (max-width: 768px) {
-    .card-carousel {
-        width: 95%;
-        height: 500px;
-    }
-
-    .business-card {
-        padding: 30px;
-    }
-    
-    .info h1 {
-        font-size: 28px;
-    }
-    
-    .info h2 {
-        font-size: 20px;
-    }
-    
-    .profile-image img {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .contact-info p {
-        font-size: 16px;
-    }
-
     .portfolio-container {
+        height: 400px;
         padding: 10px;
-        height: 300px;
+    }
+    
+    .portfolio-img {
+        max-height: 400px;
+    }
+    
+    .portfolio-navigation {
+        bottom: 10px;
     }
     
     .portfolio-nav-btn {
@@ -624,6 +607,17 @@ body {
     .portfolio-nav-btn img {
         width: 16px;
         height: 16px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .portfolio-container {
+        height: 300px;
+    }
+    
+    .portfolio-img {
+        max-height: 300px;
     }
 }
 
