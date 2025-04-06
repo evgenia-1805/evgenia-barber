@@ -422,7 +422,7 @@ body {
     overflow: hidden;
     position: relative;
     padding: 20px;
-    height: 600px;
+    height: 400px;
 }
 
 .portfolio-slider {
@@ -503,17 +503,9 @@ body {
 .portfolio-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 15px;
     transition: transform 0.5s ease;
-    background-color: var(--light);
-    max-height: 600px;
-}
-
-/* Remove the crop-bottom class since we want to show full photos */
-.portfolio-img.crop-bottom {
-    object-fit: contain;
-    object-position: center;
 }
 
 .portfolio-item:hover .portfolio-img {
@@ -584,15 +576,98 @@ body {
     transform: scale(1.2);
 }
 
-/* Mobile responsiveness for portfolio */
 @media (max-width: 768px) {
+    body {
+        padding: 0;
+        min-height: 100vh;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: block;
+        align-items: flex-start;
+    }
+    
+    .card-carousel {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        max-height: none;
+        perspective: none;
+        margin: 0;
+        transform: none;
+        position: relative;
+        top: 0;
+    }
+    
+    .cards-container {
+        transform: none !important;
+        height: auto;
+    }
+    
+    .business-card {
+        position: relative;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 0;
+        transform: none !important;
+        opacity: 1;
+        pointer-events: auto;
+        height: auto;
+        min-height: auto;
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+    
+    .profile-section {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-right: 0;
+        padding-bottom: 20px;
+        align-items: center;
+        flex: none;
+    }
+    
+    .profile-image {
+        margin-bottom: 15px;
+    }
+    
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .info {
+        width: 100%;
+        padding: 0;
+        flex: none;
+    }
+    
+    .info h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    
+    .info h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .intro-text {
+        font-size: 16px;
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
     .portfolio-container {
-        height: 400px;
+        height: 300px;
         padding: 10px;
+        flex: none;
     }
     
     .portfolio-img {
-        max-height: 400px;
+        max-height: 300px;
     }
     
     .portfolio-navigation {
@@ -608,16 +683,115 @@ body {
         width: 16px;
         height: 16px;
     }
+    
+    .navigation {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        z-index: 100;
+    }
+    
+    .nav-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .contact-info {
+        margin: 20px 0;
+    }
+    
+    .contact-info p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .skills {
+        margin-top: 20px;
+    }
+    
+    .skill-tags span {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    
+    .exp-item {
+        padding: 15px;
+        margin: 10px 0;
+    }
+    
+    .exp-item h3 {
+        font-size: 18px;
+    }
+    
+    .exp-item p {
+        font-size: 14px;
+    }
 }
 
 /* For very small screens */
 @media (max-width: 480px) {
+    .card-carousel {
+        margin: 0;
+    }
+    
+    .business-card {
+        padding: 15px;
+        border-radius: 0;
+        min-height: auto;
+    }
+    
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .info h1 {
+        font-size: 24px;
+    }
+    
+    .info h2 {
+        font-size: 18px;
+    }
+    
+    .intro-text {
+        font-size: 14px;
+        padding: 12px;
+    }
+    
     .portfolio-container {
-        height: 300px;
+        height: 250px;
     }
     
     .portfolio-img {
-        max-height: 300px;
+        max-height: 250px;
+    }
+    
+    .contact-info p {
+        font-size: 14px;
+    }
+    
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .portfolio-nav-btn {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -957,221 +1131,5 @@ body {
     }
     100% {
         opacity: 0.7;
-    }
-}
-
-/* Add viewport meta tag to ensure proper scaling */
-@viewport {
-    width: device-width;
-    initial-scale: 1.0;
-}
-
-/* Mobile responsiveness for the entire card carousel */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-        min-height: auto;
-        height: auto;
-        overflow-x: hidden;
-    }
-    
-    .card-carousel {
-        width: 100%;
-        height: auto;
-        min-height: auto;
-        margin: 0;
-        perspective: none;
-        transform: scale(0.9);
-        transform-origin: top center;
-    }
-    
-    .cards-container {
-        transform: none !important;
-        height: auto;
-    }
-    
-    .business-card {
-        position: relative;
-        padding: 20px;
-        flex-direction: column;
-        gap: 20px;
-        border-radius: 20px;
-        transform: none !important;
-        opacity: 1;
-        pointer-events: auto;
-        height: auto;
-        min-height: auto;
-        box-shadow: 0 10px 25px var(--shadow-color);
-    }
-    
-    .profile-section {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        padding-right: 0;
-        padding-bottom: 20px;
-        align-items: center;
-        flex: none;
-    }
-    
-    .profile-image {
-        margin-bottom: 15px;
-    }
-    
-    .profile-image img {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .info {
-        width: 100%;
-        padding: 0;
-        flex: none;
-    }
-    
-    .info h1 {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-    
-    .info h2 {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-    
-    .intro-text {
-        font-size: 16px;
-        padding: 15px;
-        margin: 15px 0;
-    }
-    
-    .portfolio-container {
-        height: 300px;
-        padding: 10px;
-        flex: none;
-    }
-    
-    .portfolio-img {
-        max-height: 300px;
-    }
-    
-    .portfolio-navigation {
-        bottom: 10px;
-    }
-    
-    .portfolio-nav-btn {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .portfolio-nav-btn img {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .navigation {
-        position: relative;
-        bottom: 0;
-        margin-top: 20px;
-        transform: none;
-    }
-    
-    .nav-btn {
-        width: 45px;
-        height: 45px;
-    }
-    
-    .contact-info {
-        margin: 20px 0;
-    }
-    
-    .contact-info p {
-        font-size: 16px;
-        margin: 10px 0;
-    }
-    
-    .icon {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .skills {
-        margin-top: 20px;
-    }
-    
-    .skill-tags span {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-    
-    .exp-item {
-        padding: 15px;
-        margin: 10px 0;
-    }
-    
-    .exp-item h3 {
-        font-size: 18px;
-    }
-    
-    .exp-item p {
-        font-size: 14px;
-    }
-}
-
-/* For very small screens */
-@media (max-width: 480px) {
-    .card-carousel {
-        margin: 5px;
-    }
-    
-    .business-card {
-        padding: 15px;
-        border-radius: 15px;
-        min-height: 400px;
-    }
-    
-    .profile-image img {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .info h1 {
-        font-size: 24px;
-    }
-    
-    .info h2 {
-        font-size: 18px;
-    }
-    
-    .intro-text {
-        font-size: 14px;
-        padding: 12px;
-    }
-    
-    .portfolio-container {
-        height: 250px;
-    }
-    
-    .portfolio-img {
-        max-height: 250px;
-    }
-    
-    .contact-info p {
-        font-size: 14px;
-    }
-    
-    .icon {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .nav-btn {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .portfolio-nav-btn {
-        width: 35px;
-        height: 35px;
     }
 } 
