@@ -960,20 +960,48 @@ body {
     }
 }
 
+/* Add viewport meta tag to ensure proper scaling */
+@viewport {
+    width: device-width;
+    initial-scale: 1.0;
+}
+
 /* Mobile responsiveness for the entire card carousel */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+        min-height: auto;
+        height: auto;
+        overflow-x: hidden;
+    }
+    
     .card-carousel {
         width: 100%;
         height: auto;
-        min-height: 600px;
-        margin: 20px 0;
+        min-height: auto;
+        margin: 0;
+        perspective: none;
+        transform: scale(0.9);
+        transform-origin: top center;
+    }
+    
+    .cards-container {
+        transform: none !important;
+        height: auto;
     }
     
     .business-card {
+        position: relative;
         padding: 20px;
         flex-direction: column;
         gap: 20px;
         border-radius: 20px;
+        transform: none !important;
+        opacity: 1;
+        pointer-events: auto;
+        height: auto;
+        min-height: auto;
+        box-shadow: 0 10px 25px var(--shadow-color);
     }
     
     .profile-section {
@@ -983,6 +1011,11 @@ body {
         padding-right: 0;
         padding-bottom: 20px;
         align-items: center;
+        flex: none;
+    }
+    
+    .profile-image {
+        margin-bottom: 15px;
     }
     
     .profile-image img {
@@ -993,28 +1026,33 @@ body {
     .info {
         width: 100%;
         padding: 0;
+        flex: none;
     }
     
     .info h1 {
         font-size: 28px;
+        margin-bottom: 10px;
     }
     
     .info h2 {
         font-size: 20px;
+        margin-bottom: 15px;
     }
     
     .intro-text {
         font-size: 16px;
         padding: 15px;
+        margin: 15px 0;
     }
     
     .portfolio-container {
-        height: 350px;
+        height: 300px;
         padding: 10px;
+        flex: none;
     }
     
     .portfolio-img {
-        max-height: 350px;
+        max-height: 300px;
     }
     
     .portfolio-navigation {
@@ -1032,26 +1070,64 @@ body {
     }
     
     .navigation {
-        bottom: -50px;
+        position: relative;
+        bottom: 0;
+        margin-top: 20px;
+        transform: none;
     }
     
     .nav-btn {
         width: 45px;
         height: 45px;
     }
+    
+    .contact-info {
+        margin: 20px 0;
+    }
+    
+    .contact-info p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .skills {
+        margin-top: 20px;
+    }
+    
+    .skill-tags span {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    
+    .exp-item {
+        padding: 15px;
+        margin: 10px 0;
+    }
+    
+    .exp-item h3 {
+        font-size: 18px;
+    }
+    
+    .exp-item p {
+        font-size: 14px;
+    }
 }
 
 /* For very small screens */
 @media (max-width: 480px) {
     .card-carousel {
-        width: 100%;
-        min-height: 500px;
-        margin: 10px 0;
+        margin: 5px;
     }
     
     .business-card {
         padding: 15px;
         border-radius: 15px;
+        min-height: 400px;
     }
     
     .profile-image img {
@@ -1087,5 +1163,15 @@ body {
     .icon {
         width: 16px;
         height: 16px;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .portfolio-nav-btn {
+        width: 35px;
+        height: 35px;
     }
 } 
